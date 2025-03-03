@@ -7,7 +7,7 @@ require("dotenv").config(); // For managing environment variables
 
 const app = express();
 
-// Middleware setup
+
 app.use(cors()); // Enable Cross-Origin Resource Sharing
 app.use(morgan("dev")); // Log requests
 app.use(bodyParser.json()); // Parse JSON request bodies
@@ -30,7 +30,7 @@ app.get("/", (req, res) => {
 app.post("/test", (req, res) => {
   console.log("Received data:", req.body);
   res.json({ message: "Data received successfully", data: req.body });
-});
+})
 
 // Server listening
 const PORT = process.env.PORT || 5000;
