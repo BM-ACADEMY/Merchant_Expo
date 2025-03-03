@@ -27,7 +27,6 @@ app.get("/", (req, res) => {
   res.send("Server is running!");
 });
 
-// Test route for receiving JSON data
 app.post("/test", (req, res) => {
   console.log("Received data:", req.body);
   res.json({ message: "Data received successfully", data: req.body });
